@@ -1,8 +1,14 @@
-import React, {useState, useEffect} from 'react'
-import axios from 'axios';
+import React  from 'react'
+//import axios from 'axios';
 
-export default ({postId}) => {
+export default ({comments}) => {
+   
+
     
+ /* 
+    // Once we start using query service, we dont need a network call
+    // from CommentList
+ 
     const [comments, setComments] = useState([]);
     
     const fetchData = async () => {
@@ -14,6 +20,7 @@ export default ({postId}) => {
         fetchData();
     }, [])
 
+*/
 
     const renderedComments = comments.map(comment=>{
         return <li key={comment.id}>{comment.content}</li>
