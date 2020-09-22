@@ -27,7 +27,7 @@ app.post('/posts', async (req,res)=>{
         
     // in order to work inside k8s cluster, we need to change the url to 
     // clusterIP name (changed from localhost) of the containder pod.
-    await axios.post('http://10.152.183.172:4005/events',{
+    await axios.post('http://event-bus-srv:4005/events',{
         type:'PostCreated',
         data: {
             id, title
