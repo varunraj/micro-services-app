@@ -24,8 +24,10 @@ app.post('/posts', async (req,res)=>{
                     id,
                     title 
                 }
-            
-    await axios.post('http://localhost:4005/events',{
+        
+    // in order to work inside k8s cluster, we need to change the url to 
+    // clusterIP name (changed from localhost) of the containder pod.
+    await axios.post('http://10.152.183.172:4005/events',{
         type:'PostCreated',
         data: {
             id, title
@@ -42,5 +44,7 @@ app.post('/events',(req,res)=>{
 })
 
 app.listen(4000, ()=>{
+    // Adding a new version to the deployment
+    console.log("Added latest as version in pod definition:v537")
     console.log("Listening to 4000")
 });
