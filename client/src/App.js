@@ -5,7 +5,7 @@ import PostList from './PostList'
 export default () => {
     return (
         <div className="container">
-            <h1>Create a Post</h1>
+            <h1>Create a Post!!</h1>
             <PostCreate />
             <hr />
             <PostList />

@@ -45,6 +45,6 @@ app.post('/events',(req,res)=>{
 
 app.listen(4000, ()=>{
     // Adding a new version to the deployment
-    console.log("Added latest as version in pod definition:v537")
+    console.log("Added latest as version in pod definition:v538")
     console.log("Listening to 4000")
 });
